@@ -6,8 +6,11 @@ spring:
       password: 6909
   jpa:
     hibernate:
-      ddl-auto: create
+      ddl-auto: update
     show-sql: true
   mvc:
     pathmatch:
       matching-strategy: ant_path_matcher
+  jackson:
+    serialization:
+      fail-on-empty-beans: false

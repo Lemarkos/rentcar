@@ -18,5 +18,5 @@ public class Address {
     Long id;
     String city;
     String street;
-    String building;
+    String buildingNum;
 }

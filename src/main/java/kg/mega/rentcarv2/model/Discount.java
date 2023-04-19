@@ -21,6 +21,7 @@ public class Discount {
     @JoinColumn(name = "car_id")
     Car car;
     Double discount;
+    Integer daysCount;
     LocalDateTime startDate;
     LocalDateTime endDate;
 }

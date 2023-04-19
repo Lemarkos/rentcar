@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/rentcarv2
+    hikari:
+      username: postgres
+      password: 6909
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher

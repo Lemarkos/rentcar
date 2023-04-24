@@ -1,0 +1,7 @@
+2023-04-24 18:59:35,309 INFO kg.mega.rentcarv2.service.impl.OrderServiceImpl [http-nio-8080-exec-10] SAVING ORDER
+2023-04-24 18:59:35,815 INFO kg.mega.rentcarv2.service.impl.OrderServiceImpl [http-nio-8080-exec-1] SAVING ORDER
+2023-04-24 18:59:36,305 INFO kg.mega.rentcarv2.service.impl.OrderServiceImpl [http-nio-8080-exec-2] SAVING ORDER
+2023-04-24 18:59:36,807 INFO kg.mega.rentcarv2.service.impl.OrderServiceImpl [http-nio-8080-exec-3] SAVING ORDER
+2023-04-24 19:00:10,701 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-24 19:00:10,704 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-04-24 19:00:10,708 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.

@@ -6,8 +6,9 @@ import kg.mega.rentcarv2.enums.EngineType;
 import kg.mega.rentcarv2.enums.Transmission;
 import lombok.Data;
 
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
+import java.time.LocalDateTime;
+import java.util.List;
+
 @Data
 public class CarDTO {
     Long id;

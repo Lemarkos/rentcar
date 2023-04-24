@@ -3,9 +3,12 @@ package kg.mega.rentcarv2.dto;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import kg.mega.rentcarv2.model.Address;
 import lombok.Data;
+import lombok.ToString;
+
 import java.time.LocalDateTime;
 
 @Data
+@ToString
 public class OrderDTO {
     CarDTO car;
     Boolean babySeat;

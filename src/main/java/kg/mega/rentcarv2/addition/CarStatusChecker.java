@@ -14,11 +14,11 @@ import java.util.List;
 
 @Service
 @Slf4j
-public class CarStatusUpdated {
+public class CarStatusChecker {
     private final OrderRepo orderRepo;
     private final CarRepo carRepo;
 
-    public CarStatusUpdated(OrderRepo orderRepo, CarRepo carRepo) {
+    public CarStatusChecker(OrderRepo orderRepo, CarRepo carRepo) {
         this.orderRepo = orderRepo;
         this.carRepo = carRepo;
     }

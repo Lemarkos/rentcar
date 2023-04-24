@@ -1,9 +1,6 @@
 package kg.mega.rentcarv2.model;
 
-import com.fasterxml.jackson.annotation.JsonIdentityInfo;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
-import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+import com.fasterxml.jackson.annotation.*;
 import kg.mega.rentcarv2.enums.Category;
 import kg.mega.rentcarv2.enums.Color;
 import kg.mega.rentcarv2.enums.EngineType;
@@ -14,6 +11,7 @@ import org.hibernate.annotations.Cascade;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Entity
@@ -27,6 +25,7 @@ import java.util.List;
         generator = ObjectIdGenerators.PropertyGenerator.class,
         property = "id"
 )
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class Car {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -49,13 +48,15 @@ public class Car {
     Boolean isAvailable = true;
     @ManyToOne
     @JoinColumn(name = "price_id")
-    @JsonIgnore
     Price price;
     @OneToMany(mappedBy = "car",cascade = CascadeType.ALL,fetch = FetchType.LAZY)
 //    @JsonManagedReference
-    @JsonIgnore
     List<Order> order;
     @OneToMany(mappedBy = "car",cascade = CascadeType.ALL)
-    @JsonIgnore
     List<Discount>discounts;
+//    @ManyToMany
+//    @JoinTable(name = "tb_car_tb_reserved",
+//            joinColumns = @JoinColumn(name = "car_id"),
+//            inverseJoinColumns = @JoinColumn(name = "reserved_id"))
+//    List<Reserved> reservedList;
 }

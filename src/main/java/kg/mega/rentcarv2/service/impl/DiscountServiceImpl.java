@@ -17,4 +17,14 @@ public class DiscountServiceImpl implements DiscountService {
     public List<Discount> findAllByCarIdOrderByDaysCount(Long id, Integer count) {
         return discountRepo.findAllByCarIdAndDaysCountLessThanEqualOrderByDaysCountDesc(id,count);
     }
+
+    @Override
+    public Discount save(Discount discount) {
+        return save(discount);
+    }
+
+    @Override
+    public Discount findById(Long id) {
+        return discountRepo.findById(id).get();
+    }
 }

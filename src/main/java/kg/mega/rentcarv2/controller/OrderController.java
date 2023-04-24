@@ -1,9 +1,13 @@
 package kg.mega.rentcarv2.controller;
 
+import kg.mega.rentcarv2.dto.OrderDTO;
+import kg.mega.rentcarv2.mapper.OrderMapper;
 import kg.mega.rentcarv2.model.Order;
 import kg.mega.rentcarv2.service.OrderService;
 import lombok.RequiredArgsConstructor;
 import org.aspectj.weaver.ast.Or;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -14,10 +18,11 @@ import java.util.Optional;
 @RequestMapping("/order")
 public class OrderController {
     private final OrderService orderService;
+    private final OrderMapper orderMapper;
 
     @PostMapping("/make")
-    public Order makeOrder(@RequestBody Order order){
-        return orderService.save(order);
+    public OrderDTO makeOrder(@RequestBody OrderDTO orderDTO){
+        return orderService.save(orderMapper.toEntity(orderDTO));
     }
 
     @PutMapping("/update")
@@ -39,4 +44,21 @@ public class OrderController {
     public List<Order> findAll(){
         return orderService.findAll();
     }
+
+    //    @GetMapping("/new")
+//    public String newOrder(Model model){
+//        model.addAttribute("order", new Order());
+//        return "new";
+//    }
+//
+//    @PostMapping()
+//    public String create(@ModelAttribute("order") Order order){
+//        orderService.save(order);
+//        return "redirect:/order";
+//    }
+//    @GetMapping()
+//    public String showAll(Model model){
+//        model.addAttribute("orders", orderService.findAll());
+//        return "orders";
+//    }
 }

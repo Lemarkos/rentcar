@@ -6,4 +6,6 @@ import java.util.List;
 
 public interface DiscountService {
     List<Discount>findAllByCarIdOrderByDaysCount(Long id, Integer count);
+    Discount save(Discount discount);
+    Discount findById(Long id);
 }

@@ -7,11 +7,8 @@ import kg.mega.rentcarv2.enums.EngineType;
 import kg.mega.rentcarv2.enums.Transmission;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
-import org.hibernate.annotations.Cascade;
 
 import javax.persistence.*;
-import java.io.Serializable;
-import java.time.LocalDateTime;
 import java.util.List;
 
 @Entity

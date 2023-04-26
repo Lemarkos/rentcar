@@ -10,9 +10,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.time.Duration;
-import java.time.LocalDateTime;
-import java.time.temporal.ChronoUnit;
-import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -49,7 +46,6 @@ public class OrderServiceImpl implements OrderService {
         Order updated = orderRepo.findById(order.getId()).get();
         updated.setDateFrom(order.getDateFrom() == null ? updated.getDateFrom():order.getDateFrom());
         updated.setDateTo(order.getDateTo() == null ? updated.getDateTo():order.getDateTo());
-//        updated.setClientEmail(order.getClientEmail() == null ? updated.getClientEmail(): order.getClientEmail());
         return orderRepo.save(updated);
     }
 

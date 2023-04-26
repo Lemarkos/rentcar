@@ -1,0 +1,46 @@
+2023-04-26 13:57:51,191 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.5.Final
+2023-04-26 13:57:51,195 INFO org.springframework.boot.StartupInfoLogger [main] Starting RentCarV2Application using Java 11.0.18 on MacBook-Pro-Sanzhar.local with PID 20956 (/Users/sanjar/IdeaProjects/rentCarV2/target/classes started by sanjar in /Users/sanjar/IdeaProjects/rentCarV2)
+2023-04-26 13:57:51,197 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-04-26 13:57:52,169 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-26 13:57:52,248 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 59 ms. Found 6 JPA repository interfaces.
+2023-04-26 13:57:52,490 INFO org.springframework.cloud.context.scope.GenericScope [main] BeanFactory id=fffc6972-e179-35cc-9154-29d5ea2d6e35
+2023-04-26 13:57:52,982 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-04-26 13:57:52,992 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-04-26 13:57:52,992 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2023-04-26 13:57:52,992 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-04-26 13:57:53,121 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2023-04-26 13:57:53,121 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1887 ms
+2023-04-26 13:57:53,286 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-26 13:57:53,374 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-04-26 13:57:53,575 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-04-26 13:57:53,670 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2023-04-26 13:57:53,888 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-04-26 13:57:53,911 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-04-26 13:57:54,693 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-26 13:57:54,706 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-26 13:57:55,299 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authController' defined in file [/Users/sanjar/IdeaProjects/rentCarV2/target/classes/kg/mega/rentcarv2/controller/AuthController.class]: Unsatisfied dependency expressed through constructor parameter 5; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.security.authentication.AuthenticationManager' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2023-04-26 13:57:55,300 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-26 13:57:55,304 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Shutdown initiated...
+2023-04-26 13:57:55,310 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Shutdown completed.
+2023-04-26 13:57:55,312 INFO org.apache.juli.logging.DirectJDKLog [main] Stopping service [Tomcat]
+2023-04-26 13:57:55,323 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [main] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-04-26 13:57:55,351 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 5 of constructor in kg.mega.rentcarv2.controller.AuthController required a bean of type 'org.springframework.security.authentication.AuthenticationManager' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.security.authentication.AuthenticationManager' in your configuration.
+
+2023-04-26 14:12:37,014 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.5.Final
+2023-04-26 14:12:37,019 INFO org.springframework.boot.StartupInfoLogger [main] Starting RentCarV2Application using Java 11.0.18 on MacBook-Pro-Sanzhar.local with PID 21166 (/Users/sanjar/IdeaProjects/rentCarV2/target/classes started by sanjar in /Users/sanjar/IdeaProjects/rentCarV2)
+2023-04-26 14:12:37,021 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"

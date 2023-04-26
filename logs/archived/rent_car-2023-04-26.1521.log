@@ -1,0 +1,30 @@
+2023-04-26 16:01:01,842 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-26 16:01:01,853 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-26 16:01:02,544 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-26 16:01:03,022 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@75c095a5, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@689fe2a3, org.springframework.security.web.context.SecurityContextPersistenceFilter@58a5b69c, org.springframework.security.web.header.HeaderWriterFilter@5578ed7e, org.springframework.security.web.authentication.logout.LogoutFilter@5c438795, kg.mega.rentcarv2.configuration.JWTFilter@2e4d252, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@735dc133, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@11f752d1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5257123d, org.springframework.security.web.session.SessionManagementFilter@104e6540, org.springframework.security.web.access.ExceptionTranslationFilter@299615a5, org.springframework.security.web.access.intercept.AuthorizationFilter@67201eeb]
+2023-04-26 16:01:03,383 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-04-26 16:01:03,401 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-04-26 16:01:03,750 INFO org.springframework.boot.StartupInfoLogger [main] Started RentCarV2Application in 5.375 seconds (JVM running for 6.254)
+2023-04-26 16:01:03,759 INFO kg.mega.rentcarv2.util.CarStatusChecker [scheduling-1] Checking status...
+2023-04-26 16:01:09,507 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-26 16:01:09,508 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-04-26 16:01:09,510 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 2 ms
+2023-04-26 16:02:03,884 INFO kg.mega.rentcarv2.util.CarStatusChecker [scheduling-1] Checking status...
+2023-04-26 16:03:03,895 INFO kg.mega.rentcarv2.util.CarStatusChecker [scheduling-1] Checking status...
+2023-04-26 16:04:03,900 INFO kg.mega.rentcarv2.util.CarStatusChecker [scheduling-1] Checking status...
+2023-04-26 16:04:06,467 INFO kg.mega.rentcarv2.service.impl.OrderServiceImpl [http-nio-8080-exec-2] SAVING ORDER
+2023-04-26 16:05:03,909 INFO kg.mega.rentcarv2.util.CarStatusChecker [scheduling-1] Checking status...
+2023-04-26 16:05:42,586 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-26 16:05:42,593 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-04-26 16:05:42,600 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2023-04-26 16:05:47,133 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.5.Final
+2023-04-26 16:05:47,138 INFO org.springframework.boot.StartupInfoLogger [main] Starting RentCarV2Application using Java 11.0.18 on MacBook-Pro-Sanzhar.local with PID 23332 (/Users/sanjar/IdeaProjects/rentCarV2/target/classes started by sanjar in /Users/sanjar/IdeaProjects/rentCarV2)
+2023-04-26 16:05:47,140 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-04-26 16:05:48,093 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-26 16:05:48,156 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 53 ms. Found 6 JPA repository interfaces.
+2023-04-26 16:05:48,391 INFO org.springframework.cloud.context.scope.GenericScope [main] BeanFactory id=81712ec8-42fa-34d5-a2af-57e3e570883f
+2023-04-26 16:05:48,759 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-04-26 16:05:48,769 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-04-26 16:05:48,769 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2023-04-26 16:05:48,769 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-04-26 16:05:48,869 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext

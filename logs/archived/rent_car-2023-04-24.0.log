@@ -21,7 +21,7 @@
 2023-04-24 18:58:21,835 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
 2023-04-24 18:58:21,855 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
 2023-04-24 18:58:22,225 INFO org.springframework.boot.StartupInfoLogger [main] Started RentCarV2Application in 5.283 seconds (JVM running for 6.027)
-2023-04-24 18:58:22,232 INFO kg.mega.rentcarv2.addition.CarStatusChecker [scheduling-1] Checking status...
+2023-04-24 18:58:22,232 INFO kg.mega.rentcarv2.util.CarStatusChecker [scheduling-1] Checking status...
 2023-04-24 18:58:27,895 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2023-04-24 18:58:27,896 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
 2023-04-24 18:58:27,898 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Completed initialization in 2 ms
@@ -32,5 +32,5 @@
 2023-04-24 18:59:14,067 INFO kg.mega.rentcarv2.service.impl.OrderServiceImpl [http-nio-8080-exec-6] SAVING ORDER
 2023-04-24 18:59:14,731 INFO kg.mega.rentcarv2.service.impl.OrderServiceImpl [http-nio-8080-exec-7] SAVING ORDER
 2023-04-24 18:59:15,248 INFO kg.mega.rentcarv2.service.impl.OrderServiceImpl [http-nio-8080-exec-8] SAVING ORDER
-2023-04-24 18:59:22,358 INFO kg.mega.rentcarv2.addition.CarStatusChecker [scheduling-1] Checking status...
+2023-04-24 18:59:22,358 INFO kg.mega.rentcarv2.util.CarStatusChecker [scheduling-1] Checking status...
 2023-04-24 18:59:34,835 INFO kg.mega.rentcarv2.service.impl.OrderServiceImpl [http-nio-8080-exec-9] SAVING ORDER

@@ -5,10 +5,6 @@ import kg.mega.rentcarv2.enums.Color;
 import kg.mega.rentcarv2.enums.EngineType;
 import kg.mega.rentcarv2.enums.Transmission;
 import lombok.Data;
-
-import java.time.LocalDateTime;
-import java.util.List;
-
 @Data
 public class CarDTO {
     Long id;

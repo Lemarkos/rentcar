@@ -1,0 +1,12 @@
+2023-04-27 23:03:52 [INFO ] c.p.r.NativeLoader:225 - Start check license in other process
+2023-04-27 23:03:52 [INFO ] c.p.r.NativeLoader:159 - ********************************
+2023-04-27 23:03:52 [INFO ] c.p.r.NativeLoader:160 - Native library search paths: 
+2023-04-27 23:03:52 [INFO ] c.p.r.NativeLoader:1006 - /Users/sanjar/.config/PVS-Studio-Java/7.24.70333
+2023-04-27 23:03:52 [INFO ] c.p.r.NativeLoader:1006 - .
+2023-04-27 23:03:52 [INFO ] c.p.r.NativeLoader:1006 - /Users/sanjar/.config/PVS-Studio-Java/7.24.70333/..
+2023-04-27 23:03:52 [INFO ] c.p.r.NativeLoader:1006 - /Users/sanjar/.config/PVS-Studio-Java/7.24.70333/../..
+2023-04-27 23:03:52 [INFO ] c.p.r.NativeLoader:1006 - /Users/sanjar/.config/PVS-Studio-Java/7.24.70333/../../build
+2023-04-27 23:03:52 [INFO ] c.p.r.NativeLoader:162 - Additional path: native/mac
+2023-04-27 23:03:52 [INFO ] c.p.r.NativeLoader:171 - Native library found: /Users/sanjar/.config/PVS-Studio-Java/7.24.70333/native/mac/libanalysis-core.dylib
+2023-04-27 23:03:52 [INFO ] c.p.r.NativeLoader:172 - ********************************
+2023-04-27 23:03:53 [INFO ] c.p.r.NativeLoader:227 - End check license in other process

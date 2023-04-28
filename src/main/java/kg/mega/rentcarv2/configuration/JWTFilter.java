@@ -1,13 +1,14 @@
 package kg.mega.rentcarv2.configuration;
 
-import com.auth0.jwt.exceptions.JWTVerificationException;
-import kg.mega.rentcarv2.security.JWTUtil;
-import kg.mega.rentcarv2.service.impl.AccountDetailsService;
-import lombok.NonNull;
+import kg.mega.rentcarv2.security.JWTService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.lang.NonNull;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
@@ -20,35 +21,36 @@ import java.io.IOException;
 @RequiredArgsConstructor
 @Component
 public class JWTFilter extends OncePerRequestFilter {
-
-    private final JWTUtil jwtUtil;
-    private final AccountDetailsService accountDetailsService;
+    private final JWTService jwtService;
+    private final UserDetailsService userDetailsService;
 
     @Override
-    protected void doFilterInternal(HttpServletRequest request, @NonNull HttpServletResponse response, @NonNull FilterChain filterChain) throws ServletException, IOException {
-        String authHeader = request.getHeader("Authorization");
+    protected void doFilterInternal(@NonNull HttpServletRequest request,
+                                    @NonNull HttpServletResponse response,
+                                    @NonNull FilterChain filterChain)
+            throws ServletException, IOException {
 
-        if (authHeader != null && !authHeader.isBlank() && authHeader.startsWith("Bearer ")){
-            String jwt = authHeader.substring(7);
+        final String authHeader = request.getHeader("Authorization");
+        final String jwt;
+        final String userEmail;
 
-            if (jwt.isBlank()){
-                response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Invalid JWT token");
-            }else {
-                try {
-                    String username = jwtUtil.validateToken(jwt);
-                    UserDetails userDetails = accountDetailsService.loadUserByUsername(username);
+        if (authHeader == null || !authHeader.startsWith("Bearer ")){
+            filterChain.doFilter(request,response);
+            return;
+        }
 
-                    UsernamePasswordAuthenticationToken authToken =
-                            new UsernamePasswordAuthenticationToken(userDetails,
-                                    userDetails.getPassword(),
-                                    userDetails.getAuthorities());
+        jwt = authHeader.substring(7);
+        userEmail = jwtService.extractUsername(jwt);
 
-                    if (SecurityContextHolder.getContext().getAuthentication() == null){
-                        SecurityContextHolder.getContext().setAuthentication(authToken);
-                    }
-                }catch (JWTVerificationException e){
-                    response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Invalid token");
-                }
+        if (userEmail != null && SecurityContextHolder.getContext().getAuthentication() == null){
+            UserDetails userDetails = this.userDetailsService.loadUserByUsername(userEmail);
+            if (jwtService.isTokenValid(jwt, userDetails)){
+                UsernamePasswordAuthenticationToken authToken = new UsernamePasswordAuthenticationToken(
+                        userDetails, null, userDetails.getAuthorities()
+                );
+                authToken.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
+
+                SecurityContextHolder.getContext().setAuthentication(authToken);
             }
         }
         filterChain.doFilter(request,response);

@@ -4,15 +4,19 @@ spring:
     hikari:
       username: postgres
       password: 6909
+      driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
       ddl-auto: update
     show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
   mvc:
     pathmatch:
       matching-strategy: ant_path_matcher
   jackson:
     serialization:
       fail-on-empty-beans: false
-jwt_secret:
-  SECRET

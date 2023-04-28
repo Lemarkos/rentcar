@@ -44,8 +44,8 @@ public class OrderServiceImpl implements OrderService {
     @Override
     public Order update(Order order) {
         Order updated = orderRepo.findById(order.getId()).get();
-        updated.setDateFrom(order.getDateFrom() == null ? updated.getDateFrom():order.getDateFrom());
-        updated.setDateTo(order.getDateTo() == null ? updated.getDateTo():order.getDateTo());
+        updated.setDateFrom(order.getDateFrom() == null ? updated.getDateFrom() : order.getDateFrom());
+        updated.setDateTo(order.getDateTo() == null ? updated.getDateTo() : order.getDateTo());
         return orderRepo.save(updated);
     }
 
@@ -82,8 +82,7 @@ public class OrderServiceImpl implements OrderService {
     }
 
     //Price with discount
-
-    private double getPriceWithDiscount(Order order, Car car){
+    private double getPriceWithDiscount(Order order, Car car) {
         double discount = getDiscountById(car.getId(), order.getDaysCount());
         double priceBeforeDiscount = order.getPriceBeforeDiscount();
         double discountAmount = priceBeforeDiscount * (discount / 100);
@@ -99,3 +98,4 @@ public class OrderServiceImpl implements OrderService {
 //        return dateTimes;
 //    }
 }
+

@@ -23,7 +23,7 @@ public class CarStatusChecker {
         this.carRepo = carRepo;
     }
 
-    @Scheduled(fixedDelay = 60000)
+    @Scheduled(fixedDelay = 600000)
     @Transactional
     public void statusUpdater() {
         log.info("Checking status...");

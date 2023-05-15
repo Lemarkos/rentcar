@@ -73,7 +73,7 @@ public class OrderServiceImpl implements OrderService {
     //Find discount we need
     public double getDiscountById(Long carId, int daysCount) {
         List<Discount> discountList = discountService.findAllByCarIdOrderByDaysCount(carId, daysCount);
-        if (discountList != null) {
+        if (!discountList.isEmpty()) {
             Discount discount = discountList.get(0);
             return discount.getDiscount();
         } else {
@@ -88,6 +88,8 @@ public class OrderServiceImpl implements OrderService {
         double discountAmount = priceBeforeDiscount * (discount / 100);
         return priceBeforeDiscount - discountAmount;
     }
+
+
 //    private List<LocalDateTime> getRange(LocalDateTime start, LocalDateTime end){
 //        List<LocalDateTime> dateTimes = new ArrayList<>();
 //        LocalDateTime date = start;

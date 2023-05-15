@@ -21,7 +21,7 @@ public class AuthenticationService {
     private final AuthenticationManager authenticationManager;
 
     public AuthenticationResponse register(RegisterRequest request){
-        var account = Account.builder()
+        Account account = Account.builder()
                 .firstname(request.getFirstname())
                 .lastname(request.getLastname())
                 .email(request.getEmail())
@@ -29,7 +29,7 @@ public class AuthenticationService {
                 .role(Role.USER)
                 .build();
         accountRepo.save(account);
-        var jwtToken = jwtService.generateToken(account);
+        String jwtToken = jwtService.generateToken(account);
         return AuthenticationResponse.builder()
                 .token(jwtToken)
                 .build();
@@ -42,9 +42,9 @@ public class AuthenticationService {
                         request.getPassword()
                 )
         );
-        var account = accountRepo.findByEmail(request.getEmail())
+        Account account = accountRepo.findByEmail(request.getEmail())
                 .orElseThrow();
-        var jwtToken = jwtService.generateToken(account);
+        String jwtToken = jwtService.generateToken(account);
         return AuthenticationResponse.builder()
                 .token(jwtToken)
                 .build();

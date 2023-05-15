@@ -1,6 +1,7 @@
 package kg.mega.rentcarv2.util;
 
 import kg.mega.rentcarv2.model.Account;
+import kg.mega.rentcarv2.repositories.AccountRepo;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.User;
@@ -13,6 +14,7 @@ import org.springframework.validation.Validator;
 @Component
 public class AccountValidator implements Validator{
     private final UserDetailsService userDetailsService;
+    private final AccountRepo accountRepo;
 
     @Override
     public boolean supports(@NonNull Class<?> clazz) {
@@ -24,7 +26,7 @@ public class AccountValidator implements Validator{
         Account account = (Account) target;
 
         try {
-            userDetailsService.loadUserByUsername(account.getUsername());
+            accountRepo.findByEmail(account.getUsername());
         }catch (UsernameNotFoundException e){
             return;
         }
